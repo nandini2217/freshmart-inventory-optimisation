@@ -1,0 +1,5 @@
+type nul > data/output/.gitkeep
+type nul > data/processed/.gitkeep
+type nul > powerbi/.gitkeep
+type nul > reports/.gitkeep
+type nul > video/slides/.gitkeep

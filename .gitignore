@@ -1,0 +1,34 @@
+# Virtual Environment - never push this
+venv/
+env/
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Data files - raw CSVs (too large for GitHub)
+data/raw/
+data/processed/*.db
+
+# But DO push output folder (keep it tracked)
+!data/output/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+*.txt.bak
