@@ -11,7 +11,6 @@
 **A complete end-to-end Business Analyst portfolio project**  
 From business problem definition → SQL analysis → Python EDA → demand forecasting → executive Power BI dashboard
 
-[📊 View Dashboard](#-power-bi-dashboard) · [🗂️ Project Structure](#-project-structure) · [▶️ How to Run](#-how-to-run) · [📋 Key Findings](#-key-findings)
 
 </div>
 
@@ -71,91 +70,62 @@ The Operations Director flagged a critical inventory crisis:
 
 ---
 
----
+
+## 📈 Analysis Charts
 
 ---
 
 ## 📈 Analysis Charts
 
-### Stockout Risk by Product
-![Stockout Risk](reports/images/chart1_stockout_risk.png)
+### EDA & Inventory Analysis
 
-### Inventory Health by Category
-![Inventory Health](reports/images/chart2_inventory_health.png)
+<table>
+  <tr>
+    <td width="50%">
+      <img src="reports/images/chart1_stockout_risk.png" alt="Stockout Risk" width="100%"/>
+      <p align="center"><b>Stockout Risk by Product</b></p>
+    </td>
+    <td width="50%">
+      <img src="reports/images/chart2_inventory_health.png" alt="Inventory Health" width="100%"/>
+      <p align="center"><b>Inventory Health by Category</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="reports/images/chart3_revenue_trend.png" alt="Revenue Trend" width="100%"/>
+      <p align="center"><b>Monthly Revenue Trend 2022–2024</b></p>
+    </td>
+    <td width="50%">
+      <img src="reports/images/chart4_inventory_heatmap.png" alt="Inventory Heatmap" width="100%"/>
+      <p align="center"><b>Inventory Level Heatmap</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="reports/images/chart5_abc_classification.png" alt="ABC Classification" width="100%"/>
+      <p align="center"><b>ABC Classification — Pareto Analysis</b></p>
+    </td>
+    <td width="50%">
+      <img src="reports/images/chart8_reorder_dashboard.png" alt="Reorder Dashboard" width="100%"/>
+      <p align="center"><b>Reorder Recommendation Dashboard</b></p>
+    </td>
+  </tr>
+</table>
 
-### Monthly Revenue Trend 2022–2024
-![Revenue Trend](reports/images/chart3_revenue_trend.png)
+### Demand Forecasting
 
-### Inventory Level Heatmap — Category × Month
-![Inventory Heatmap](reports/images/chart4_inventory_heatmap.png)
-
-### ABC Classification — Pareto Analysis
-![ABC Classification](reports/images/chart5_abc_classification.png)
-
-### Prophet Demand Forecasts — 90-Day Horizon
-![Demand Forecasts](reports/images/chart6_demand_forecasts.png)
-
-### Seasonality Decomposition — Electronics
-![Seasonality](reports/images/chart7_seasonality.png)
-
-### Reorder Recommendation Dashboard
-![Reorder Dashboard](reports/images/chart8_reorder_dashboard.png)
-
----
-
-## 🏗️ Project Architecture
-
-This project follows the **Medallion Architecture** pattern used in enterprise data platforms:
-
-```
-freshmart-inventory-optimisation/
-│
-├── 🟤 BRONZE LAYER (Raw Data)
-│   └── data/raw/
-│       └── retail_store_inventory.csv        ← Kaggle dataset (73,100 rows)
-│
-├── ⚪ SILVER LAYER (Cleaned & Structured)
-│   └── data/processed/
-│       ├── freshmart.db                      ← SQLite database (6 tables)
-│       └── freshmart_clean.csv               ← Cleaned dataset
-│
-├── 🟡 GOLD LAYER (Business Outputs)
-│   └── data/output/
-│       ├── chart1_stockout_risk.png
-│       ├── chart2_inventory_health.png
-│       ├── chart3_revenue_trend.png
-│       ├── chart4_inventory_heatmap.png
-│       ├── chart5_abc_classification.png
-│       ├── chart6_demand_forecasts.png
-│       ├── chart7_seasonality.png
-│       ├── chart8_reorder_dashboard.png
-│       ├── abc_classification.csv
-│       ├── freshmart_reorder_recommendations.xlsx
-│       └── freshmart_master_reorder_report.xlsx
-│
-├── 💎 INSIGHT LAYER (Presentation)
-│   └── powerbi/
-│       └── freshmart_dashboard.pbix          ← 4-page Power BI dashboard
-│
-├── 📓 NOTEBOOKS
-│   ├── notebooks/01_data_exploration.ipynb   ← Phase 1: Data setup & schema
-│   ├── notebooks/02_eda_analysis.ipynb       ← Phase 2: SQL + EDA + ABC
-│   ├── notebooks/03_forecasting.ipynb        ← Phase 3: Prophet forecasting
-│   └── notebooks/04_reorder_engine.ipynb     ← Phase 3: Reorder engine & EOQ
-│
-├── 🗄️ SQL
-│   ├── sql/01_schema_setup.sql               ← 5-table database schema
-│   ├── sql/02_inventory_analysis.sql         ← Inventory KPI queries
-│   └── sql/03_kpi_queries.sql                ← Business KPI queries
-│
-├── 📄 REPORTS
-│   ├── reports/phase1_summary.pdf
-│   └── reports/phase2_summary.pdf
-│
-├── README.md
-└── requirements.txt
-```
-
+<table>
+  <tr>
+    <td width="60%">
+      <img src="reports/images/chart6_demand_forecasts.png" alt="Demand Forecasts" width="100%"/>
+      <p align="center"><b>Prophet 90-Day Demand Forecasts — All Categories</b></p>
+    </td>
+    <td width="40%">
+      <img src="reports/images/chart7_seasonality.png" alt="Seasonality" width="100%"/>
+      <p align="center"><b>Seasonality Decomposition — Electronics</b></p>
+    </td>
+  </tr>
+</table>
 ---
 
 ## 🗄️ Database Schema
